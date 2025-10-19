@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Spectrhan All Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+  <div class="shine"></div>
+
+<!-- Halaman Awal -->
+<div id="welcome-message" class="welcome-message">
+  <div class="welcome-box">
+    <h1>Selamat Datang</h1>
+    <h1>Spectrhan All Payment</h1>
+  </div>
+  <button id="go-to-payment" class="btn-pay">Masuk</button>
+</div>
+
+  <!-- Halaman Utama -->
+  <div id="main-content" class="hidden">
+    <h1>List Payment</h1>
+    <p>All Payment Website Milik Spectrhan</p>
+
+    <div class="qr">
+      <img src="p.png" alt="Logo Spectrhan Payment">
+    </div>
+
+    <p class="subtitle">Pilih Salah Satu Metode Pembayaran</p>
+
+    <div class="collapsible-container">
+
+      <!-- QRIS -->
+      <button class="collapsible" id="qris-btn">QRIS</button>
+      <div class="content">
+        <img 
+          src="https://files.catbox.moe/t990gd.png" 
+          id="qris-image" 
+          alt="QRIS Spectrhan" 
+          style="width: 200px; border-radius: 12px; cursor: pointer;"
+        />
+        <p>Scan QRIS di atas untuk melanjutkan pembayaran.</p>
+      </div>
+
+      <!-- DANA -->
+      <button class="collapsible">DANA</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-dana">0858-8811-3291</span>
+          <button class="copy-btn" data-target="nomor-dana">📋 Salin</button>
+        </div>
+      </div>
+
+      <!-- GOPAY -->
+      <button class="collapsible">GOPAY</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-gopay">0858-8811-3291</span>
+          <button class="copy-btn" data-target="nomor-gopay">📋 Salin</button>
+        </div>
+      </div>
+      
+      <!-- OVO -->
+      <button class="collapsible">OVO</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-ovo">0822-4650-0896</span>
+          <button class="copy-btn" data-target="nomor-ovo">📋 Salin</button>
+        </div>
+      </div>
+    
+      <!-- SeaBank -->
+      <button class="collapsible">SeaBank</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-seabank">901118446286</span>
+          <button class="copy-btn" data-target="nomor-seabank">📋 Salin</button>
+        </div>
+      </div>
+    
+      <!-- Bank Mandiri -->
+      <button class="collapsible">Bank Mandiri</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-mandiri">1760004435556</span>
+          <button class="copy-btn" data-target="nomor-mandiri">📋 Salin</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tombol Sosial -->
+    <div class="btn-group">
+      <a href="https://wa.me/6285888113291" class="btn-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="https://www.instagram.com/dzulfikrii_a?igsh=MWV5aDRzM3R2c3Jldg==" class="btn-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://t.me/dzulfikrii_a" target="_blank" class="btn-link">Telegram</a>
+    </div>
+  </div>
+
+  <!-- Fullscreen QR Overlay -->
+  <div class="fullscreen-qr hidden" id="fullscreen-qr">
+    <img src="https://files.catbox.moe/t990gd.png" alt="QRIS Fullscreen">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

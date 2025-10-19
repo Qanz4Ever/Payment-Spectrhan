@@ -1,0 +1,337 @@
+/* Reset dasar */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+html, body {
+height: 100%;
+overflow: hidden;
+font-family: 'Outfit', sans-serif;
+background: url('b.jpg') no-repeat center center fixed;
+background-size: cover;
+color: #e6f7e6;
+text-align: center;
+}
+
+/* Konten utama bisa di-scroll tanpa scrollbar */
+#main-content {
+display: none;
+overflow-y: auto;
+max-height: 100vh;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
+#main-content::-webkit-scrollbar {
+display: none;
+}
+
+/* Efek shine */
+.shine {
+position: absolute;
+top: -100%;
+left: -100%;
+width: 300%;
+height: 300%;
+background: linear-gradient(135deg, rgba(80, 255, 120, 0.15), rgba(0, 255, 100, 0));
+transform: rotate(45deg);
+animation: shine 5s infinite linear;
+z-index: 0;
+}
+
+@keyframes shine {
+0% { transform: translate(-100%, -100%) rotate(45deg); }
+100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+/* Halaman utama */
+#main-content {
+background: rgba(10, 20, 10, 0.55);
+backdrop-filter: blur(12px);
+border-radius: 18px;
+padding: 25px;
+margin: 25px;
+box-shadow: 0 8px 32px rgba(0, 255, 100, 0.15);
+animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Pesan selamat datang */
+.welcome-message {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: #d9ffd9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  z-index: 9999;
+}
+
+.welcome-box {
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 35px; /* jarak antara teks dan tombol */
+}
+
+.welcome-box h1 {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.btn-pay {
+  background: #3bff72;
+  color: #000;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transform: translateY(10px); /* sedikit keluar dari teks */
+  transition: all 0.25s ease;
+}
+
+.btn-pay:hover {
+  background: #62ff8f;
+  transform: translateY(5px);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+font-size: 2.3em;
+margin-bottom: 0.3em;
+background: linear-gradient(90deg, #00ff99, #aaffaa);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: fadeInDown 1s ease;
+}
+
+p {
+font-size: 1.05em;
+color: #bfe9bf;
+animation: fadeInUp 0.9s ease;
+}
+
+/* QR Style */
+.qr {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 25px 0;
+}
+
+.qr img {
+width: 210px;
+border-radius: 14px;
+display: block;
+box-shadow: 0 0 18px rgba(0, 255, 100, 0.25);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr:hover img {
+transform: scale(1.07);
+box-shadow: 0 0 25px rgba(0, 255, 100, 0.45);
+}
+
+/* Container collapsible */
+.collapsible-container {
+max-width: 500px;
+margin: 30px auto;
+background: rgba(15, 25, 15, 0.7);
+border-radius: 16px;
+padding: 20px;
+box-shadow: inset 0 0 12px rgba(0, 255, 100, 0.08);
+}
+
+/* Tombol collapsible */
+.collapsible {
+position: relative;
+background: linear-gradient(135deg, #005533, #00b36b);
+color: #fff;
+cursor: pointer;
+padding: 14px 20px;
+width: 100%;
+font-size: 1.05em;
+border-radius: 12px;
+margin-top: 10px;
+text-align: left;
+border: none;
+transition: all 0.3s ease;
+}
+
+.collapsible:hover {
+background: linear-gradient(135deg, #00cc77, #007a4d);
+transform: translateY(-2px);
+}
+
+.collapsible::after {
+content: '▼';
+position: absolute;
+right: 18px;
+top: 50%;
+transform: translateY(-50%);
+transition: transform 0.3s ease;
+}
+
+.collapsible.active::after {
+transform: translateY(-50%) rotate(-180deg);
+}
+
+/* Konten collapsible */
+.content {
+max-height: 0;
+overflow: hidden;
+background: rgba(0, 25, 0, 0.55);
+backdrop-filter: blur(8px);
+border-radius: 0 0 12px 12px;
+transition: max-height 0.4s ease, padding 0.3s ease;
+padding: 0 20px;
+color: #d9ffd9;
+font-size: 0.95em;
+border: 1px solid rgba(0, 255, 100, 0.08);
+text-align: left;
+}
+
+.content.open {
+padding: 14px 20px;
+max-height: 350px;
+}
+
+/* Fix teks "Atas Nama" agar rapi dan sejajar */
+.content p {
+margin: 6px 0;
+color: #c3eec3;
+font-size: 0.95em;
+line-height: 1.6em;
+display: flex;
+align-items: center;
+gap: 6px;
+flex-wrap: wrap;
+}
+
+.content strong {
+color: #a7f3d0;
+font-weight: 600;
+min-width: 95px;
+}
+
+.content span.nama {
+color: #fff;
+font-weight: 600;
+flex: 1;
+}
+
+/* Tombol grup */
+.btn-group {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 35px;
+gap: 12px;
+}
+
+.btn-link, .btn-pay {
+padding: 13px 26px;
+background: linear-gradient(45deg, #00ff99, #00884d, #004d33);
+background-size: 200% 200%;
+animation: gradientBtn 6s ease infinite;
+color: #fff;
+font-weight: 600;
+border-radius: 12px;
+text-decoration: none;
+transition: all 0.3s;
+box-shadow: 0 0 15px rgba(0, 255, 100, 0.2);
+}
+
+.btn-link:hover, .btn-pay:hover {
+transform: scale(1.06);
+box-shadow: 0 0 25px rgba(0, 255, 100, 0.45);
+}
+
+@keyframes gradientBtn {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+/* Overlay QR Fullscreen */
+.fullscreen-qr {
+position: fixed;
+inset: 0;
+background: rgba(0, 10, 0, 0.85);
+backdrop-filter: blur(8px);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9998;
+transition: opacity 0.3s ease;
+}
+
+.fullscreen-qr img {
+max-width: 90%;
+max-height: 90%;
+border-radius: 16px;
+box-shadow: 0 0 25px rgba(0, 255, 100, 0.35);
+}
+
+.fullscreen-qr.hidden {
+display: none;
+}
+
+/* Responsif */
+@media (max-width: 500px) {
+h1 { font-size: 1.8em; }
+.collapsible-container { padding: 15px; }
+.btn-link, .btn-pay { width: 90%; }
+}
+
+/* Container nomor dan tombol salin */
+.payment-number {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: rgba(0, 0, 0, 0.3);
+padding: 10px 15px;
+border-radius: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+color: #d1d5db;
+font-weight: 500;
+}
+
+.copy-btn {
+display: flex;
+align-items: center;
+gap: 6px;
+background: linear-gradient(90deg, #16a34a, #22c55e);
+border: none;
+color: white;
+padding: 6px 12px;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.2s ease;
+font-weight: 600;
+}
+
+.copy-btn:hover {
+background: linear-gradient(90deg, #22c55e, #16a34a);
+transform: scale(1.05);
+}
+
+.copy-btn.copied {
+background: linear-gradient(90deg, #10b981, #059669);
+}
