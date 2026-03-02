@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>TGRS All Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon.png">
+  <link rel="shortcut icon" href="../media/favicon.png" type="image/png">
+</head>
+<body>
+
+  <div class="shine"></div>
+
+<div id="welcome-message" class="welcome-message">
+  <div class="welcome-box">
+    <h1>Selamat Datang</h1>
+    <h1>TGRS All Payment</h1>
+  </div>
+  <button id="go-to-payment" class="btn-pay">Masuk</button>
+</div>
+
+  <div id="main-content" class="hidden">
+    <h1>List Payment</h1>
+    <p>All Payment Website Milik TGRS</p>
+
+    <div class="logo">
+      <img src="../media/logo.jpg" alt="Logo Spectrhan Payment">
+    </div>
+
+    <p class="subtitle">Pilih Salah Satu Metode Pembayaran</p>
+
+    <div class="collapsible-container">
+
+      <button class="collapsible">Bank BCA</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-mandiri">7295785268</span>
+          <button class="copy-btn" data-target="nomor-mandiri">📋 Salin</button>
+        </div>
+      </div>
+      
+      <button class="collapsible">DANA</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-dana">0822-4650-0896</span>
+          <button class="copy-btn" data-target="nomor-dana">📋 Salin</button>
+        </div>
+      </div>
+
+      <button class="collapsible">GOPAY</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-gopay">0858-8811-3291</span>
+          <button class="copy-btn" data-target="nomor-gopay">📋 Salin</button>
+        </div>
+      </div>
+
+      <button class="collapsible">OVO</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-ovo">0822-4650-0896</span>
+          <button class="copy-btn" data-target="nomor-ovo">📋 Salin</button>
+        </div>
+      </div>
+
+      <button class="collapsible">Shoppe Pay</button>
+      <div class="content">
+        <div class="payment-number">
+          <span id="nomor-seabank">0858-8811-3291</span>
+          <button class="copy-btn" data-target="nomor-seabank">📋 Salin</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="btn-group">
+      <a href="https://www.instagram.com/tangress.bckup?igsh=MW01aWM0ZXpxam1lNA==" class="btn-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
+
+  <audio id="bg-music" src="../media/music.mp3" loop></audio>
+  <div id="music-toggle" class="music-toggle">🔊</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
